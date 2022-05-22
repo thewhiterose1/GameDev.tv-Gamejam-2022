@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f5ed82b772b30bf44b61b10b62fc10c3
+guid: 0e410cc978f3b874a84b6df6019a3cb1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,43 +118,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree_2_0
+      name: ForestFloor_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 0
-        width: 247
-        height: 320
+        x: 0
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7fa03fa1cb5d6743ab128546d535d84
-      internalID: -205071822
+      spriteID: a897c85a6890c404190d10bcfef62185
+      internalID: 1342351502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree_2_1
+      name: ForestFloor_1
       rect:
         serializedVersion: 2
-        x: 358
-        y: 0
-        width: 247
-        height: 320
+        x: 160
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f44be9ff2fedb34281063919623ab36
-      internalID: -597925015
+      spriteID: 7ff2eb76aefb2f641b36bb7d9979aef6
+      internalID: 797317941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForestFloor_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35592ff7e9041d64b9e917a91e62b9dc
+      internalID: -1276720809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForestFloor_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c808749282bb27e48b88f6d452431193
+      internalID: 1721938249
       vertices: []
       indices: 
       edges: []
@@ -168,12 +210,12 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 7270c60dac7e189498f4d41c13858574, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     nameFileIdTable:
-      tree_2_1: -597925015
-      tree_2_0: -205071822
+      ForestFloor_3: 1721938249
+      ForestFloor_0: 1342351502
+      ForestFloor_1: 797317941
+      ForestFloor_2: -1276720809
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
