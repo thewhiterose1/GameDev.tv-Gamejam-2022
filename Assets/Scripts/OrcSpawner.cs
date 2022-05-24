@@ -18,7 +18,6 @@ public class OrcSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.time);
         actualSpawnTime = timeToSpawn * (20 / Time.time);
         Timer += Time.deltaTime;
         if (Timer > actualSpawnTime)

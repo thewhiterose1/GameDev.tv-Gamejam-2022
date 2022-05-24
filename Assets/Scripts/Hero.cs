@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterControllScript : MonoBehaviour
+public class Hero : MonoBehaviour, IAgent
 {
     private GameObject[] playerList;
     public GameObject activePlayer;
@@ -12,14 +12,20 @@ public class CharacterControllScript : MonoBehaviour
     {
         playerList = GameObject.FindGameObjectsWithTag("Player");
         activePlayer = playerList[0];
+        this.moveSpeed = 5f;
     }
 
-    
+    public int health { get; set; }
+    public int baseAttack { get; set; }
+    public float moveSpeed { get; set; }
 
-    public Vector2 speed = new Vector2(50, 50);
     // Update is called once per frame
     void Update()
     {
+        this.PlayerController();
+    }
+
+    public void PlayerController() {
         if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("P");
@@ -64,12 +70,14 @@ public class CharacterControllScript : MonoBehaviour
             }
         }
 
+        Debug.Log(activePlayer);
+        Debug.Log(gameObject);
         if (activePlayer == gameObject)
         {
             float inputX = Input.GetAxis("Horizontal");
             float inputY = Input.GetAxis("Vertical");
 
-            Vector3 movement = new Vector3(speed.x * inputX, 0, speed.y * inputY);
+            Vector3 movement = new Vector3(this.moveSpeed * inputX, 0, this.moveSpeed * inputY);
 
             movement *= Time.deltaTime;
 
@@ -77,11 +85,31 @@ public class CharacterControllScript : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, activePlayer.transform.position) > 3.5f    )
+            if (Vector3.Distance(transform.position, activePlayer.transform.position) > 3.5f)
             {
-                Debug.Log(activePlayer.transform.position);
+                //Debug.Log(activePlayer.transform.position);
                 transform.position = Vector3.MoveTowards(transform.position, activePlayer.transform.position, 0.05f);
             }
         }
+    }
+
+    public void AttackNearest()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Idle()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DefaultAttack()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Die()
+    {
+        throw new System.NotImplementedException();
     }
 }

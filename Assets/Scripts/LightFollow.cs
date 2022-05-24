@@ -6,7 +6,7 @@ public class LightFollow : MonoBehaviour
 {
     private GameObject[] playerList;
     private Vector3 moveTo;
-    public float speed = 1.0f;
+    public float speed = 0.003f;
     private enum BobState
     {
         stateUp, stateDown
