@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hero : MonoBehaviour, IAgent
 {
     private GameObject[] playerList;
     public GameObject activePlayer;
+
+    public Image healthUI;
 
     // Start is called before the first frame update
     void Start()
@@ -13,8 +16,11 @@ public class Hero : MonoBehaviour, IAgent
         playerList = GameObject.FindGameObjectsWithTag("Player");
         activePlayer = playerList[0];
         this.moveSpeed = 5f;
+        this.maxHealth = this.health;
+        this.health = 100;
     }
 
+    public int maxHealth { get; set; }
     public int health { get; set; }
     public int baseAttack { get; set; }
     public float moveSpeed { get; set; }
@@ -23,6 +29,14 @@ public class Hero : MonoBehaviour, IAgent
     void Update()
     {
         this.PlayerController();
+        if (health <= 0) {
+            this.Die();
+        }
+    }
+
+    public void UpdateHealth(int health, int maxHealth)
+    {
+        healthUI.fillAmount = (health / maxHealth) * 100;
     }
 
     public void PlayerController() {
