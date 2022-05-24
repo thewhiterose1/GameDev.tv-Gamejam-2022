@@ -77,7 +77,7 @@ public class CharacterControllScript : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, activePlayer.transform.position) > 3.5f)
+            if (Vector3.Distance(transform.position, activePlayer.transform.position) > 3.5f    )
             {
                 Debug.Log(activePlayer.transform.position);
                 transform.position = Vector3.MoveTowards(transform.position, activePlayer.transform.position, 0.05f);
