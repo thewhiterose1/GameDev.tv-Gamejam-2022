@@ -1,7 +1,7 @@
 public interface IAgent
 {
-    public int health { get; set; }
-    public int baseAttack { get; set; }
+    public float health { get; set; }
+    public float baseAttack { get; set; }
     public float moveSpeed { get; set; }
     public string name { get; set; }
 
